@@ -1,0 +1,12 @@
+name: Run Script
+
+on: [issues, issue_comment]
+
+jobs:
+  build:
+    uses: alpico/workflows/.github/workflows/notion_bridge.yml@main
+    with:
+      page: "3813ac18b51748b2a05b7bb9ae9b211e"
+    secrets:
+      gh_token: ${{ secrets.GH_TOKEN }}
+      notion_api_key: ${{ secrets.NOTION_API_KEY }}
